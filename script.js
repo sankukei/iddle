@@ -1,1 +1,9 @@
-console.log('Hello from the script.js file!');
+
+
+function increment() {
+
+    let cook = document.getElementById("coockie");
+    let value = cook.innerText
+    value++;
+    cook.innerText = value
+}
