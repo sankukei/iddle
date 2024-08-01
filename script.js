@@ -17,9 +17,20 @@ function increment() {
 
 function buy_drill() {
     if(game_data.cookie >= game_data.drill_price) {
+        const cook = document.getElementById("cookie");
+        const c_per_sec = document.getElementById("persec")
         game_data.cookie -= game_data.drill_price
         game_data.cookie_per_sec += 1;
+        cook.innerHTML = game_data.cookie
+        c_per_sec.innerText = "cookie per sec : " + game_data.cookie_per_sec
     }
+}
+
+function reset() {
+
+    game_data.cookie = 0;
+    game_data.cookie_per_sec = 0;
+    
 }
 
 console.log(game_data);
@@ -35,8 +46,11 @@ if (save_game !== null) {
 let game_loop = setInterval(() => {
     console.log(game_data);
     const cook = document.getElementById("cookie")
+    const c_per_sec = document.getElementById("persec")
     game_data.cookie += game_data.cookie_per_sec;
     cook.innerText = game_data.cookie
+    c_per_sec.innerHTML = "cookie per sec : " + game_data.cookie_per_sec
+
     
 }, 1000);
 

@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer ></script>
-
     <title>Document</title>
 </head>
 <body>
-    <p>Cookie</p>
-    <p id="cookie"></p>
-    <button onclick="increment()">Click me</button>
-    <button onclick="buy_drill()">Drill: 10</button>
+    <div class="font">
+        <div>
+            <p>Cookie</p>
+            <p id="cookie"></p>
+            <p id="persec">cookie per sec : 0</p>
+        </div>
+    </div>
+    <div>
+        <div class="btn">
+            <button id="test" onclick="increment()">Click me</button>
+            <button onclick="buy_drill()">Drill: 10</button>
+            <button onclick="reset()">reset save</button>
+        </div>
+    </div>
 
 </body>
 </html>
